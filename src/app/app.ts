@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +6,12 @@ import { Component, signal } from '@angular/core';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
+export class App implements OnInit {
   protected readonly title = signal("S.W.A.T");
+
+  public ngOnInit(): void {
+    this.changeTitle();
+  }
 
   public changeTitle(): void {
     this.title.set("S.W.A.T - South West Association of Tournaments");
