@@ -14,6 +14,6 @@ export class App implements OnInit {
   }
 
   public changeTitle(): void {
-    this.title.set("S.W.A.T - South West Association of Tournaments Test");
+    this.title.set("S.W.A.T - South West Association of Tournaments");
   }
 }
